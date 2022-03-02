@@ -19,6 +19,8 @@ type Courses struct {
 	CoursesAndGrades map[string]int
 }
 
+var StudentDB []Students
+
 func init() {
 	st := []Students{
 		{Name: "Chisom", Age: 14, Gender: "female", Fees: 10750, Classes: Classes{Classrooms: map[string]int{"JSS1": +1}},
@@ -48,7 +50,7 @@ func init() {
 
 var listOfCourses = []string{"Physics", "Chemistry", "Biology", "Economics", "English", "Maths", "Agric", "Yoruba", "Literature", "Commerce"}
 
-func (s Students) TakeACourse(name string, course string) {
+func (s Students) TakeACourse(name string, course string) string {
 	for i, v := range StudentDB {
 		if v.Name == name {
 			for _, x := range listOfCourses {
@@ -60,4 +62,5 @@ func (s Students) TakeACourse(name string, course string) {
 			}
 		}
 	}
+	return "you have successfully registered for a course"
 }

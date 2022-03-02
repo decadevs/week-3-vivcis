@@ -2,7 +2,6 @@ package my
 
 import "log"
 
-var StudentDB []Students
 var ApplicantDB []Applicants
 
 type Principal struct {
@@ -32,7 +31,7 @@ type Applicants struct {
 //	log.Println(ApplicantDB)
 //}
 
-func (p *Principal) AdmitApplicant(a Applicants) {
+func (p *Principal) AdmitApplicant(a Applicants) string {
 	if a.Age < 16 {
 		log.Println("not old enough to be admitted")
 	} else {
@@ -45,8 +44,9 @@ func (p *Principal) AdmitApplicant(a Applicants) {
 		}
 		StudentDB = append(StudentDB, student)
 		log.Println("welcome to cece's high school")
-	}
 
+	}
+	return "welcome to cece's high school"
 }
 
 //expelled for poor grades'
