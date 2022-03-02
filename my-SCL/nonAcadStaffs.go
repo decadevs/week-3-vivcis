@@ -10,7 +10,7 @@ type NonAcademicStaffs struct {
 //scl assembly starts by 8am
 //any students later than that is assumed a latecomer and punished by cutting grass or washing toilet
 
-func (nas NonAcademicStaffs) LateComingToSchool(name string) {
+/* func (nas NonAcademicStaffs) LateComingToSchool(name string) {
 
 	var t string = "8:00am"
 	for _, v := range StudentDB {
@@ -19,3 +19,4 @@ func (nas NonAcademicStaffs) LateComingToSchool(name string) {
 		}
 	}
 }
+*/

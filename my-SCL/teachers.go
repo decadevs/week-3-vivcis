@@ -50,26 +50,26 @@ func (t Teachers) GradeCourses(teachersName string, StudentsName string, course 
 	//log.Println("you are not to grade this course")
 }
 
-func (t Teachers) GetAverageGrades(name string, course string, grade int) float32 {
-	sum := 0
-	for _, v := range StudentDB {
-		if v.Name == name {
-			if _, found := v.CoursesAndGrades[course]; found {
-				v.CoursesAndGrades[course] = grade
-				sum += v
-			}
-		}
-	}
-	return float32(sum) / float32(len(v.CoursesAndGrades[course]))
-}
-
-func (s Students) GetMaxGrades() int {
-	currentMax := 0
-
-	for _, v := range StudentDB {
-		if currentMax < v {
-			currentMax = v
-		}
-	}
-	return currentMax
-}
+//func (t Teachers) GetAverageGrades(name string, course string, grade int) float32 {
+//	sum := 0
+//	for _, v := range StudentDB {
+//		if v.Name == name {
+//			if _, found := v.CoursesAndGrades[course]; found {
+//				v.CoursesAndGrades[course] = grade
+//				sum += v
+//			}
+//		}
+//	}
+//	return float32(sum) / float32(len(v.CoursesAndGrades[course]))
+//}
+//
+//func (s Students) GetMaxGrades() int {
+//	currentMax := 0
+//
+//	for _, v := range StudentDB {
+//		if currentMax < v {
+//			currentMax = v
+//		}
+//	}
+//	return currentMax
+//}

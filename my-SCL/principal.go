@@ -49,6 +49,10 @@ func (p *Principal) AdmitApplicant(a Applicants) {
 
 }
 
+//expelled for poor grades'
+//student is warned and advised to put in more efforts
+//good student to keep it up
+
 func (p Principal) ExpelStudent(studentName string) {
 	for i, v := range StudentDB {
 		if studentName == v.Name {
