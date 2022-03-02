@@ -33,7 +33,7 @@ type Applicants struct {
 
 func (p *Principal) AdmitApplicant(a Applicants) string {
 	if a.Age < 16 {
-		log.Println("not old enough to be admitted")
+		return "not old enough to be admitted"
 	} else {
 		student := Students{
 			Name:    a.Name,
@@ -43,10 +43,10 @@ func (p *Principal) AdmitApplicant(a Applicants) string {
 			Classes: Classes{Classrooms: map[string]int{a.Class: +1}},
 		}
 		StudentDB = append(StudentDB, student)
-		log.Println("welcome to cece's high school")
+		return "welcome to cece's high school"
 
 	}
-	return "welcome to cece's high school"
+
 }
 
 //expelled for poor grades'

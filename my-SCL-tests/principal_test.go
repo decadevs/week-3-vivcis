@@ -23,7 +23,7 @@ func TestPrincipal_AdmitApplicant(t *testing.T) {
 
 		expectedOutput string
 	}{
-		{my.Principal{Name: "Okon", Age: 43, Gender: "Male"}, my.Applicants{"Alexis", 34, "Female", "JSS 2A"}, "welcome to cece's high school"},
+		{my.Principal{Name: "Okon", Age: 43, Gender: "Male"}, my.Applicants{"Alexis", 18, "Female", "JSS 2A"}, "welcome to cece's high school"},
 		{my.Principal{Name: "Judith", Age: 18, Gender: "Female"}, my.Applicants{"Joe B", 14, "Male", "JSS 1C"}, "not old enough to be admitted"},
 	}
 	for _, val := range admitApplicant {
@@ -59,25 +59,25 @@ func TestPrincipal_ExpelStudent(t *testing.T) {
 	}
 }
 
-func TestPrincipal_SackTeacher(t *testing.T) {
-	var sackTeacher = []struct {
-		input  my.Principal
-		input1 my.Teachers
-
-		expectedOutput string
-	}{
-		{my.Principal{}, my.Teachers{
-			Name:    "Micheal",
-			Age:     60,
-			Gender:  "male",
-			Subject: "Yoruba",
-		}, "you have been sacked from this HONOURABLE institution"},
-	}
-
-	for _, v := range sackTeacher {
-		sacked := v.input.SackTeacher(v.input1)
-		if sacked != v.expectedOutput {
-			t.Errorf("expected output to be %v but got output %v", v.expectedOutput, sacked)
-		}
-	}
-}
+//func TestPrincipal_SackTeacher(t *testing.T) {
+//	var sackTeacher = []struct {
+//		input  my.Principal
+//		input1 my.Teachers
+//
+//		expectedOutput string
+//	}{
+//		{my.Principal{}, my.Teachers{
+//			Name:    "Micheal",
+//			Age:     60,
+//			Gender:  "male",
+//			Subject: "Yoruba",
+//		}, "you have been sacked from this HONOURABLE institution"},
+//	}
+//
+//	for _, v := range sackTeacher {
+//		sacked := v.input.SackTeacher(v.input1)
+//		if sacked != v.expectedOutput {
+//			t.Errorf("expected output to be %v but got output %v", v.expectedOutput, sacked)
+//		}
+//	}
+//}
